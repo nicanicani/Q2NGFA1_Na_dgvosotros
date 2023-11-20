@@ -6,25 +6,25 @@
 /*720p landscape screen*/
 @media screen and (max-width: 720px){
     nav{
-        background-color: #A8B501;
+        background-color: #cced1d;
     }
 }
 /*square tablets*/
 @media screen and (max-width: 640px){
     nav{
-        background-color: #A8B501;
+        background-color: #cced1d;
     }
 }
 /*some tablet*/
 @media screen and (max-width: 600px){
     nav{
-        background-color: #A8B501;
+        background-color: #cced1d;
     }
 }
 /*mobile*/
 @media screen and (max-width: 480px){
     nav{
-        background-color: #A8B501;
+        background-color: #cced1d;
     }
 }
 
@@ -48,7 +48,57 @@ nav
 section
 {
     display: flex;
-    height: 85vh;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+section video{
+    width: 90vw;
+}
+/*base sprite css*/
+.icon{
+    background: url(media/sprite.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+/*individual sprite positions*/
+#twitter{background-position: -430px -46px;}
+#instagram{background-position: -40px -176px;}
+#tiktok{background-position: -170px -176px;}
+#spotify{background-position: -300px -305px;}
+#youtube{background-position: -300px -176px;}
+/*code for site responsiveness*/
+@media screen and (max-width: 600px){
+nav{
+    position: relative;
+    background-color: #cced1d;
+}
+#sitename{
+    background-color: #cced1d;
+    padding: 1vw;
+    color: black;
+    transition: .5s;
+}
+#links{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: #cced1d;
+    min-width: 100vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+}
+#links a{
+    color: black;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: block;
+    transition: .5s;
+    margin-left: 0;
+    padding-left: 1vh;
+}
+#links a:hover{background-color: #B9D91A; transition: .5s;}
+nav:hover #links{display: block; transition: .5s;}
+nav:hover #sitename{background-color: #cced1d; transition: .5s;}
 }
